@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-camera>
+                <a-cursor fuse="true" fuse-timeout="1000"></a-cursor>
+            </a-camera>
+            <a-sky color="gray"></a-sky>
+            <a-box position="4 0 -8" height="2" depth="0.5" width="4" color="orange"
+            animation="
+            property: rotation;
+            from: 0 0 0;
+            to: 0 360 0;
+            dur: 500;
+            loop: 8;
+            startEvents: click;
+            "
+            animation__2="
+            property: position;
+            from: 4 0 -8;
+            to: 4 1 -8;
+            dur: 1000;
+            loop: 4;
+            dir: alternate;
+            startEvents: click;
+            "
+            ></a-box>
+            <a-box position="-4 0 -8" height="2" depth="0.5" width="2" color="pink"
+            animation="
+            property: rotation;
+            from: 20 0 0;
+            to: -20 0 0;
+            dur: 400;
+            loop: 8;
+            dir: alternate;
+            startEvents: click;
+            "
+            animation__2="
+            property: position;
+            from: -4 0 -7.5;
+            to: -4 0 -8;
+            dur: 400;
+            loop: 8;
+            dir: alternate;
+            startEvents: click;
+            "
+            ></a-box>
+        </a-scene>
+    </body>
+</html>
